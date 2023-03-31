@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display ID</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+    <form method="POST">
+        <label for="aadhar_idd">Enter Aadhar ID:</label>
+        <input type="text" name="aadhar_idd" id="aadhar_idd">
+        <input type="submit" value="Submit">
+    </form>
+    {%if row %}
+            <p>Aadhar ID: {{ row['AADHAAR_NO'] }}</p>
+            <p>Name: {{ row['NAME'] }}</p>
+            <p>Dose: {{ row['DOSE_no'] }}</p>
+    {% elif error %}
+            <p>{{ error }}</p>
+    {% endif %}   
+    <a href = "/">Go back to home page</a>
+</body>
+</html>

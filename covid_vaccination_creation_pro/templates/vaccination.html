@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vaccination Information</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+    <h1>Vaccination Information</h1>
+    <form action="/a_vaccine" method="POST">
+        <label for="aadhar_id">Aadhaar Number:</label><br>
+        <input type="text" id="aadhar_id" name="AADHAAR_no" required><br><br>
+        <label for="vaccinedate">Vaccination Date:</label><br>
+        <input type="date" id="vaccinedate" name="VACCINATION_DATE" ><br><br>
+        <label for="dose">DOSE:</label><br>
+        <input type="number" id="dose" name="DOSE_no" required ><br><br>
+        <label for="age">AGE:</label><br>
+        <input type="number" id="age" name="AGE"  required ><br><br>
+        <label for="vaccsite">Vaccination Site:</label><br>
+        <input type="text" id="vaccsite" name="vaccination_site" required><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

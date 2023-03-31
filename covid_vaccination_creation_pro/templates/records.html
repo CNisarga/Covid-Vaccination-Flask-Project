@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+   <head>
+      <title>records</title>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+  </head>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>Aadhar ID</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Age</td>
+            <td>Address</td>
+            <td>Dose</td>
+            <td>Vaccination Date</td>
+            <td>Vaccination Site</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+                <td>{{row["AADHAAR_NO"]}}
+               <td>{{row["NAME"]}}</td>
+               <td>{{row["GENDER"]}}</td>
+               <td>{{row["AGE"]}}</td>
+               <td>{{row["ADDRESS"]}}</td>
+               <td>{{row["DOSE_no"]}}</td>
+               <td> {{ row["VACCINATION_DATE"]}}</td>
+               <td>{{row["vaccination_site"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+      
+        <a href = "/">Go back to home page</a>
+        
+     </body>
+  </html>
+
+

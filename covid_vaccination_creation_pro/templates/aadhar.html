@@ -1,0 +1,30 @@
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enter Aadhar Information</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+</head>
+<body>
+    <h1>Enter Aadhar Number</h1>
+    <form action="/a_aadhar" method="POST">
+        <label for="aadhar_no">Aadhar Number:</label><br>
+        <input type="text" id="aadhar_no" name="AADHAAR_NO" required><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="NAME" required><br><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="DATE_OF_BIRTH" required><br><br>
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="GENDER" value="Male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="GENDER" value="Female" required>
+        <label for="female">Female</label><br><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="ADDRESS" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
